@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>FORM VALIDATION</title>
+	<script type="text/javascript">
+		function validation()
+		{
+			var text;
+			if(document.MyFrom.name.value==""){
+				text="Name cannot be empty";
+				document.getElementById("demo").
+				innerHTML=text;
+				document.MyFrom.name.focus();
+				return false;
+			}
+			if(document.MyFrom.email.value==""){
+				text="E-mail cannot be empty";
+				document.getElementById("demo").
+				innerHTML=text;
+				document.MyFrom.email.focus();
+				return false;
+		}
+		var emailID=document.MyFrom.email.value;
+		atposn=emailID.indexOf("@");
+		dotposn=emailID.lastindexOf(".");
+		if(atposn < 1 ||(dotposn-atposn < 2))
+		{
+			text="please enter valid E-mail ID";
+			document.getElementById("demo").innerHTML=text;
+			document.MyFrom.email.focus();
+			return false;
+		}
+		 if(document.MyFrom.phone.value=="")||isNaN(document.MyFrom.phone.value)||(document.MyFrom.phone.length !=10)
+		 {
+		 	text="please enter a valid 10-digit phone number";
+		 	document.getElementById("demo").
+		 	innerHTML=text;
+		 	document.MyFrom.phone.focus();
+		 	return false;
+		 }
+		 if(document.MyFrom.subject.value=="0")
+		 {
+		 	text="please provide your area od experties";
+		 	document.getElementById("demo").
+		 	innerHTML=text;
+		 	return false;
+		 }
+		 return(true);
+		 }
+	</script>
+</head>
+<body>
+	<form action=""name="MY FORM" onsubmit="return(validate());">
+		<h1 align="center">USER REGISTRATION</h1>
+		<table align="center"cellspacing="5" cellspacing="3" border="3">
+			<tr>
+				<td align="right">Name</td>
+				<td><input type="type" name="name"/></td>
+			</tr>
+			<tr>
+				<td align="right">E-mail</td>
+				<td><input type="text" name="email"/></td>
+			</tr>
+			<tr>
+				<td align="right">phone number</td>
+				<td><input type="text" name="phone"/></td>
+			</tr>
+			<tr>
+				<td align="right">subject</td>
+				<td>
+					<select name="subject">
+						<option value="1">HTML</option>
+							<option value="2">JAVASCRIPT</option>
+							<option value="3">CSS</option>
+							<option value="4">JSP</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<p id="demo" style="color:red; text-align:center">
+		</p>
+		<div style="text-align:center"><input type="submit" value ="submit"/>
+		</div>
+	</form>
+</body>

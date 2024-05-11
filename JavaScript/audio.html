@@ -1,0 +1,70 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Forms</title>
+</head>
+<body>
+	<h2>This is forms tutorial</h2>
+	<form action="backend.php">
+	
+ <div>
+ 	Name:<input type="text" name="myname">
+ 	
+ </div>
+ <br>
+ <div>
+ 	Role:<input type="text" name="myRole">
+ </div>
+<br>
+ <div>
+ 	Password:<input type="password" name="mypassword">
+ </div>
+ <br>
+ <div>
+ 	Email:<input type="email" name="myEmail">
+ </div>
+ <br>
+ <div>
+ 	Date:<input type="date" name="myDate">
+ </div>
+ <br>
+ <div>
+ 	Bonus:<input type="number" name="myBonus">
+ </div>
+ <br>
+ <div>
+ 	Are you eligible yes or No:<input type="checkbox" name="myEligibility" checked>
+ </div>
+ <br>
+ <div>
+ 	Gender:Male <input type="radio" name="myGender"> Female:
+ 	<input type="radio" name="myGender"> other: <input type="radio" name="myGender">
+ </div>
+ <br>
+ <div>
+ 	Write about yourself:<br><textarea name="myText" cols="90" rows="10">
+ 	</textarea>
+ </div>
+ <br>
+ <div>
+ <label for="fileupload"> Select a file to upload</label>
+ <input type="file" name="fileupload"  value="fileupload"  id="fileupload">
+</div>
+<br>
+<div>
+	<label for="car">Car</label>
+	<select name="mycar" id="car">
+		<option value="ind">Indica</option>
+		<option value="swf"  selected>Swift</option>
+	</select>
+</div>
+<br>
+<div>
+	<input type="submit" Value="Submit Now">
+	<input type="reset" Value="Reset Now">
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+	
+</head><body>
+	<script type="text/javascript"> 
+		function agefun()
+		{
+			var x=document.getElementById("ag");
+			var age=x.value;
+			if(age>=18)
+			{
+				//alert("candidate is eligible for voting");
+				document.write("candidate is eligible for voting");
+			}
+			else
+			{
+				//alert("candidate is not eligible for voting");
+				document.write("candidate is not eligible for voting");
+			}
+		}
+	 </script>
+	 enter your age:<input type="text" id="ag">
+	 <input type="submit" onclick="agefun()">
+	</body>
+	</html>
